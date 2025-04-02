@@ -2,7 +2,7 @@
  * Author: Matthew Tan
  * Course: COMP-003B: ASP.NET Core
  * Faculty: Jonathan Cruz
- * Purpose: An MVC application synthesizing routing, model binding, and model validation. 
+ * Purpose: An MVC app synthesizing routing, model binding, and model validation. 
  */
 
 namespace COMP003B.Assignment_3
