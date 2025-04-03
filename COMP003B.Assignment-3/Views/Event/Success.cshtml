@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Event - Success";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model COMP003B.Assignment_3.Models.EventRegistration
+
+<h2>Registration Successful</h2>
+<partial name="_EventNav" />
+<p>Thank you,@Model.FullName !</p>
+<p>The email you entered is @Model.Email</p>
+<p>You have successfully registered for @Model.EventCode with @Model.Tickets</p>
+<p>ReferralCode: @Model.ReferralCode</p>
+
+
