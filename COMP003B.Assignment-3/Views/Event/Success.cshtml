@@ -7,9 +7,17 @@
 
 <h2>Registration Successful</h2>
 <partial name="_EventNav" />
-<p>Thank you,@Model.FullName !</p>
+<p>Thank you, @Model.FullName !</p>
 <p>The email you entered is @Model.Email</p>
-<p>You have successfully registered for @Model.EventCode with @Model.Tickets</p>
-<p>ReferralCode: @Model.ReferralCode</p>
+<p>You have successfully registered for @Model.EventCode with @Model.Tickets ticket(s).</p>
+
+@if (!string.IsNullOrEmpty(Model.EventCode))
+{
+    <p>ReferralCode: @Model.ReferralCode</p>
+}
+else
+{
+    <p></p>
+}
 
 
