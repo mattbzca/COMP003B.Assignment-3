@@ -4,23 +4,22 @@ using System.Reflection.Metadata.Ecma335;
 
 namespace COMP003B.Assignment_3.Controllers
 {
-    // Handles request that start with "/event".
-    [Route("event")]
+    
     public class EventController : Controller
     {
-        [HttpGet("Event/Register/{eventCode}")]
-        public IActionResult Register(string eventCode = "spring-2025")
+        [HttpGet("event/register/{eventCode}")]
+        public IActionResult Register([FromRoute] string eventCode)
         {
             return View();
         }
 
-        [HttpGet("/Event/Register")]
+        [HttpGet]
         public IActionResult Register()
         {
             return View();
         }
 
-        [HttpPost("/Event/Register")]
+        [HttpPost]
         public IActionResult Register([FromForm] EventRegistration Event) 
         {
             if (!ModelState.IsValid)
